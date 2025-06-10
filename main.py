@@ -23,6 +23,11 @@ def list_tasks(tasks):
             print(f"{i}. {task['title']} [{status}]")
     print()
 
+def add_task(tasks):
+    title = input("عنوان کار جدید را وارد کن: ")
+    tasks.append({"title": title, "done": False})
+    save_tasks(tasks)
+    print("کار اضافه شد.\n")
 
 
 def mark_done(tasks):
